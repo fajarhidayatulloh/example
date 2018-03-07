@@ -1,22 +1,24 @@
+// +build main3
+
 package main
 
 import "fmt"
 import "strings"
 
-type student struct{
+type student struct {
 	name string
-	age int
+	age  int
 }
 
-func (s student) sayHello(){
-	fmt.Println("Hello, ",s.name)
+func (s student) sayHello() {
+	fmt.Println("Hello, ", s.name)
 }
 
-func (s student) getNameAt(i int) string{
+func (s student) getNameAt(i int) string {
 	return strings.Split(s.name, " ")[i-1]
 }
 
-func main(){
+func main() {
 	var s1 = student{"Fajar Hidayat", 21}
 	s1.sayHello()
 

@@ -1,7 +1,9 @@
+// +build main3
+
 package main
 
-import "go/library"
+import "example/library"
 
-func main(){
+func main() {
 	library.SayHello("Fajar")
 }

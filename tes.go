@@ -1,11 +1,13 @@
+// +build main3
+
 package main
 
 import "fmt"
 
 func main() {
-	for i := 1; i<10; i++ {
+	for i := 1; i < 10; i++ {
 
-		if i % 2 == 1 {
+		if i%2 == 1 {
 			continue
 		}
 
@@ -13,6 +15,6 @@ func main() {
 			break
 		}
 
-		fmt.Println("Angka",i)
+		fmt.Println("Angka", i)
 	}
 }

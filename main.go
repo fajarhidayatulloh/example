@@ -1,3 +1,5 @@
+// +build main1
+
 package main
 
 import (
@@ -5,9 +7,9 @@ import (
 	f "fmt"
 )
 
-func main(){
+func main() {
 	var s1 = library.Student{"Fajar", 23}
 
-	f.Println("Nama :",s1.Name)
-	f.Println("Age :",s1.Age)
+	f.Println("Nama :", s1.Name)
+	f.Println("Age :", s1.Age)
 }
