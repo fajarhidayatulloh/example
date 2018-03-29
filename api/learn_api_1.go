@@ -6,6 +6,11 @@ import (
 	http "net/http"
 )
 
+/**
+ * @Author: fajar
+ * @Date: 2018-03-27 13:54:47
+ * @Desc:
+ */
 type student struct {
 	ID   string
 	Nama string
@@ -19,6 +24,11 @@ var data = []student{
 	student{"E004", "ABCD", 26},
 }
 
+/**
+ * @Author: fajar
+ * @Date: 2018-03-27 13:54:51
+ * @Desc:
+ */
 func users(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
@@ -36,6 +46,11 @@ func users(w http.ResponseWriter, r *http.Request) {
 	http.Error(w, "", http.StatusBadRequest)
 }
 
+/**
+ * @Author: fajar
+ * @Date: 2018-03-27 13:54:54
+ * @Desc:
+ */
 func user(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
@@ -64,6 +79,11 @@ func user(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+/**
+ * @Author: fajar
+ * @Date: 2018-03-27 13:54:58
+ * @Desc:
+ */
 func main() {
 	http.HandleFunc("/users", users)
 	http.HandleFunc("/user", user)
